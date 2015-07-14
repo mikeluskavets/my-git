@@ -389,7 +389,12 @@ function location_load_results($data){
     return $result;
 }
 
-
+/**
+* 
+* @param string $url
+* 
+* @return string
+*/
 function get_data($url) {
 	$ch = curl_init();
 	$timeout = 5;
@@ -573,12 +578,11 @@ function parser_latlon(){
     echo $r.'/'.$q.'/'.$i.'/'.count($locations);
 }
 if(isset($_REQUEST['imploc'])){
-//    imp_locations();
+    imp_locations();
 }
 if(isset($_REQUEST['parser_latlon'])){
-// 	add_action('init', 'parser_latlon');
+ 	add_action('init', 'parser_latlon');
 }
 if(isset($_REQUEST['delloc'])){
-//    delete_location1();
+    delete_location1();
 }
-?>
